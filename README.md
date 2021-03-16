@@ -1,20 +1,25 @@
 # BPGC
 This repository contains the Matlab code for implementing the bootstrap panel Granger causality procedure proposed by Kónya (Kónya, L. Exports and growth: Granger causality analysis on OECD countries with a panel data approach. Economic Modelling, 23(6), 978-992, 2006), which is based on the seemingly unrelated regressions (SUR) systems and the Wald tests with individual-specific bootstrap critical values, and accounts for both cross-sectional error dependence and slope heterogeneity across individual units.
-1. Description
+
+\section{Description}
+
 This repository contains the Matlab code for implementing the bootstrap panel Granger causality procedure proposed by Kónya (2006), which is based on the seemingly unrelated regressions (SUR) systems and the Wald tests with individual-specific bootstrap critical values, and accounts for both cross-sectional error dependence and slope heterogeneity across individual units. 
 
-2. Usage
+Usage
+
 Download the Bootstrap_Panel_Causality.rar file and unzip it in a directory of your choice. Within the unzipped folder Bootstrap_Panel_Causality, you will find two files and one subfolder. The files are:
 	causality.m: a Matlab script file for implementing the bootstrap panel Granger causality procedure proposed by Kónya, L. (2006).
 	data.xlsx: an excel file containing the sample data.
 In addition, the subfolder is Functions, which contains four Matlab routines (m-files) required by the causality.m script.
 
 3. Citation
+
 This code is provided as supplementary material for our paper:
 Haghnejad, A., Samadi, S., Nasrollahi, K., Azarbayjani, K., & Kazemi, I. (2020). Market power and efficiency in the Iranian banking industry. Emerging Markets Finance and Trade, 56(13), 3217-3234. 
 Please cite this paper if you are using the code in your research.
 
 4. The bootstrap panel Granger causality test
+
 Kónya (2006) proposes a panel Granger causality test based on the seemingly unrelated regressions (SUR) systems and the Wald tests with individual-specific bootstrap critical values, which accounts for both cross-sectional error dependence and slope heterogeneity across individual units. In the framework of the bootstrap panel causality approach, Granger causality from x to y can be tested using the following set of equations:
 	y_(1,t)=α_1+∑_(j=1)^ly▒β_(1,j)  y_(1,t-j)+∑_(j=1)^lx▒γ_(1,j)  x_(1,t-j)+ε_(1,t),	
 	y_(2,t)=α_2+∑_(j=1)^ly▒β_(2,j)  y_(2,t-j)+∑_(j=1)^lx▒γ_(2,j)  x_(2,t-j)+ε_(2,t),	
@@ -35,5 +40,6 @@ Step 5: Substitute y_(i,t)^* for y_(i,t) and estimate the set of equations (1) w
 Step 6: Obtain the empirical distribution of the individual Wald statistics by repeating steps 3‐5 many times, calculate the appropriate percentiles of the bootstrap distributions (bootstrap critical values), and then compare the Wald statistics corresponding to the original data set (step 1) with the empirical critical values for each cross‐section.
 
 References
+
 Haghnejad, A., Samadi, S., Nasrollahi, K., Azarbayjani, K., & Kazemi, I. (2020). Market power and efficiency in the Iranian banking industry. Emerging Markets Finance and Trade, 56(13), 3217-3234. 
 Kónya, L. (2006). Exports and growth: Granger causality analysis on OECD countries with a panel data approach. Economic Modelling, 23(6), 978-992. 
